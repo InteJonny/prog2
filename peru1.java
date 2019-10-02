@@ -15,34 +15,32 @@ public class peru extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //Drawing a Circle
-        Rectangle rect = new Rectangle();
-        Rectangle rect2 = new Rectangle();
+        //Creating recangles
+        Rectangle rectangleLeft = new Rectangle();
+        Rectangle rectangleRight = new Rectangle();
 
-        //LEFT RECTANGEL
-        rect.setX(0);
-        rect.setY(0);
-        rect.setWidth(210);
-        rect.setHeight(300);
-
-        //RIGHT RECTANGEL
-        rect2.setX(390);
-        rect2.setY(0);
-        rect2.setWidth(210);
-        rect2.setHeight(300);
-
-        
-        rect.setFill(Color.RED);
-        rect2.setFill(Color.RED);
+        //LEFT RECTANGEL size and position
+        rectangleLeft.setX(0);
+        rectangleLeft.setY(0);
+        rectangleLeft.setWidth(210);
+        rectangleLeft.setHeight(300);
+        //RIGHT RECTANGEL  size and position
+        rectangleRight.setX(390);
+        rectangleRight.setY(0);
+        rectangleRight.setWidth(210);
+        rectangleRight.setHeight(300);
+        //setting color to rectangles
+        rectangleLeft.setFill(Color.RED);
+        rectangleRight.setFill(Color.RED);
 
         //SÄTTER IHOP DOM
-        Group root = new Group(rect, rect2);
+        Group root = new Group(rectangleLeft, rectangleRight);
 
         //Creating a scene object
         Scene scene = new Scene(root, 600, 300);
         scene.setFill(Color.WHITE);
         //Setting title to the Stage
-        primaryStage.setTitle("Drawing a Circle");
+        primaryStage.setTitle("Drawing a Rectangle");
 
         primaryStage.setScene(scene);
 
